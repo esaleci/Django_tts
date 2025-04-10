@@ -1,5 +1,5 @@
 """
-WSGI config for django_tts_app project.
+WSGI config for api project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
