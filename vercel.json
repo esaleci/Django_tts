@@ -5,11 +5,22 @@
       "src": "api/wsgi.py",  
       "use": "@vercel/python" ,
       "config": { 
-        "installCommand": "pip install -r requirements.txt && python -c \"import nltk; nltk.download('punkt', download_dir='/tmp/nltk_data')\""
+        "installCommand": "pip install -r requirements.txt && python -c \"import nltk; nltk.download('punkt', download_dir='/tmp/nltk_data')\"",
+        "includeFiles": [
+          "static/**",
+          "templates/**"
+        ]
+      },
+      "env": {
+        "DISABLE_COLLECTSTATIC": "0"
       }
     }  
   ],  
-  "routes": [  
+  "routes": [ 
+    {
+      "src": "/static/(.*)",
+      "dest": "/static/$1"
+    }, 
     {  
       "src": "/(.*)",  
       "dest": "api/wsgi.py"  
