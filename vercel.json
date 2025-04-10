@@ -2,7 +2,7 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "django_tts_app/wsgi.py"
+      "dest": "api/wsgi.py"
     }
   ]
 }
