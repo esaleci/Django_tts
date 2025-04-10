@@ -16,7 +16,9 @@ from django.conf import settings
 
 # Download NLTK data for tokenization (first-time only)
 try:
+    nltk.download('punkt', quiet=True)
     nltk.data.find('tokenizers/punkt')
+    print("ok get data!")
 except LookupError:
     nltk.download('punkt', quiet=True)
 
