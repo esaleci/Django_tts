@@ -7,18 +7,13 @@
       "config": { 
         "installCommand": "pip install -r requirements.txt && python -c \"import nltk; nltk.download('punkt', download_dir='/tmp/nltk_data')\"",
         "includeFiles": [
-          "static/**",
-          "templates/**"
+          "static/**"
         ],
         "maxLambdaSize": "15mb"
       }
       
-    },
-    {
-      "src": "build_files.sh",
-      "use": "@vercel/static-build",
-      "config": { "distDir": "staticfiles" }
-  }  
+    }
+   
   ],  
   "routes": [ 
     {
@@ -29,6 +24,6 @@
       "src": "/(.*)",  
       "dest": "api/wsgi.py"  
     }  
-  ]  ,
-   "outputDirectory": "staticfiles"
+  ]  
+  
 }
