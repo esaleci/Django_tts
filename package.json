@@ -1,0 +1,16 @@
+{
+  "name": "django-tts-app",
+  "version": "1.0.0",
+  "description": "Django Text-to-Speech Web Application",
+  "scripts": {
+    "build": "tailwindcss -i ./static/css/tailwind-input.css -o ./static/css/tailwind-output.css",
+    "watch": "tailwindcss -i ./static/css/tailwind-input.css -o ./static/css/tailwind-output.css --watch"
+  },
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.10",
+    "tailwindcss": "^3.3.3"
+  },
+  "dependencies": {
+    "tailwindcss-animate": "^1.0.7"
+  }
+}
