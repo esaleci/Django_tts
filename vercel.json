@@ -3,7 +3,10 @@
   "builds": [  
     {  
       "src": "api/wsgi.py",  
-      "use": "@vercel/python"  
+      "use": "@vercel/python" ,
+      "config": { 
+        "installCommand": "pip install -r requirements.txt && python -c \"import nltk; nltk.download('punkt', download_dir='/tmp/nltk_data')\""
+      }
     }  
   ],  
   "routes": [  

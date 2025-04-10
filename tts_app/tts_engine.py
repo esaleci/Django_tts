@@ -14,13 +14,15 @@ import nltk
 from nltk.tokenize import sent_tokenize
 from django.conf import settings
 
+nltk.data.path.append("/tmp/nltk_data")
+os.makedirs("/tmp/nltk_data", exist_ok=True)
 # Download NLTK data for tokenization (first-time only)
 try:
-    nltk.download('punkt', quiet=True)
+   
     nltk.data.find('tokenizers/punkt')
     print("ok get data!")
 except LookupError:
-    nltk.download('punkt', quiet=True)
+    nltk.download('punkt',download_dir="/tmp/nltk_data",  quiet=True)
 
 
 class EnhancedTTS:
