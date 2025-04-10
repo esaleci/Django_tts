@@ -10,10 +10,8 @@
           "static/**",
           "templates/**"
         ]
-      },
-      "env": {
-        "DISABLE_COLLECTSTATIC": "0"
       }
+      
     }  
   ],  
   "routes": [ 
