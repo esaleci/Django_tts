@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Django Text-to-Speech Web Application",
   "scripts": {
-    "build": ""
+    "build": "node init && "
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.10",
