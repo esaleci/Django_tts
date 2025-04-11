@@ -10,3 +10,4 @@ urlpatterns = [
     path('convert/', views.convert_text, name='convert'),
     path('history/', views.history, name='history'),
 ]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
